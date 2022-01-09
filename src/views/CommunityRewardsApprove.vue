@@ -96,15 +96,15 @@
           <v-card justify="center" class="fill-width mt-10">
             <v-card-title>
               <span class="title font-weight-light">
-                {{ $t("Current Token Address") }}
+                {{ $t("LP Token Address") }}
               </span>
             </v-card-title>
             <v-divider></v-divider>
             <v-card-text>
               <v-row align="center">
                 <v-col class="body-1" cols="12">
-                  <p @click="handleCopy(DAOAddress, $event)">
-                    DAO contract: {{ DAOAddress }}
+                  <p @click="handleCopy(USDT_DAO_DLT_Address, $event)">
+                    USDT-DAO Pair Address: {{ USDT_DAO_DLT_Address }}
                     <v-icon>mdi-content-copy</v-icon>
                   </p>
                 </v-col>
@@ -157,7 +157,7 @@ import { required, decimal } from "vuelidate/lib/validators";
 import clip from "@/utils/clipboard";
 import {
   CommunityRewardsUSDTDAOApproveContractAddress,
-  DAOAddress
+  USDT_DAO_DLT_Address
 } from "@/constants";
 import { getContract, weiToEther, etherToWei } from "@/utils/web3";
 // 引入合约 ABI 文件
@@ -171,7 +171,7 @@ export default {
   },
   data: () => ({
     loading: false,
-    DAOAddress,
+    USDT_DAO_DLT_Address,
     dialog: false,
     releaseAmountFocus: false,
     releaseAmount: undefined,

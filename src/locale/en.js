@@ -113,5 +113,6 @@ export default {
   },
 
   "USDT-DAO": "USDT-DAO",
-  DAT: "DAT"
+  DAT: "DAT",
+  "LP Token Address": "LP Token Address"
 };
