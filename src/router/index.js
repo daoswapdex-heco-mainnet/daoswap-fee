@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import CommunityRewardsApprove from "../views/CommunityRewardsApprove.vue";
+import CommunityRewardsApproveUSDTDAO from "../views/CommunityRewardsApproveUSDTDAO.vue";
+import CommunityRewardsApproveUSDTHFIL from "../views/CommunityRewardsApproveUSDTHFIL.vue";
+import CommunityRewardsApproveUSDTETH from "../views/CommunityRewardsApproveUSDTETH.vue";
 
 Vue.use(VueRouter);
 
@@ -12,8 +14,32 @@ const routes = [
     children: [
       {
         path: "",
-        name: "Rewards",
-        component: CommunityRewardsApprove
+        name: "Home",
+        redirect: "/usdt-dao",
+        component: () => import("@/views/home/Index.vue")
+      },
+      {
+        path: "/usdt-dao",
+        name: "RewardsUSDTDAO",
+        component: CommunityRewardsApproveUSDTDAO
+      },
+      {
+        path: "/usdt-hfil",
+        name: "RewardsUSDTHFIL",
+        component: CommunityRewardsApproveUSDTHFIL
+      },
+      {
+        path: "/usdt-eth",
+        name: "RewardsUSDTETH",
+        component: CommunityRewardsApproveUSDTETH
+      },
+      {
+        path: "/404",
+        component: () => import("@/views/404.vue")
+      },
+      {
+        path: "*",
+        redirect: "/404"
       }
     ]
   }

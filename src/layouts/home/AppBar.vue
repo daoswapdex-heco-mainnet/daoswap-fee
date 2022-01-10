@@ -27,12 +27,28 @@
           background-color="transparent"
         >
           <v-tab
-            to="/"
+            to="/usdt-dao"
             :ripple="false"
             class="font-weight-bold"
             min-width="96"
             text
             >{{ $t("USDT-DAO") }}</v-tab
+          >
+          <v-tab
+            to="/usdt-hfil"
+            :ripple="false"
+            class="font-weight-bold"
+            min-width="96"
+            text
+            >{{ $t("USDT-HFIL") }}</v-tab
+          >
+          <v-tab
+            to="/usdt-eth"
+            :ripple="false"
+            class="font-weight-bold"
+            min-width="96"
+            text
+            >{{ $t("USDT-ETH") }}</v-tab
           >
         </v-tabs>
       </div>
@@ -60,8 +76,14 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list shaped>
         <v-list-item-group v-model="group" color="#93B954">
-          <v-list-item to="/">
+          <v-list-item to="/usdt-dao">
             <v-list-item-title>{{ $t("USDT-DAO") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/usdt-hfil">
+            <v-list-item-title>{{ $t("USDT-HFIL") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/usdt-eth">
+            <v-list-item-title>{{ $t("USDT-ETH") }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
