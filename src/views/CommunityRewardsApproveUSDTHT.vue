@@ -7,10 +7,10 @@
             <v-card outlined>
               <v-card-title>
                 <v-avatar size="24" class="mr-2">
-                  <img :src="require('@/assets/logo.png')" alt="USDT-HFIL" />
+                  <img :src="require('@/assets/logo.png')" alt="USDT-HT" />
                 </v-avatar>
                 <span class="title font-weight-light">
-                  USDT-HFIL {{ $t("Available Amount") }}
+                  USDT-HT {{ $t("Available Amount") }}
                 </span>
               </v-card-title>
               <v-card-text>
@@ -103,8 +103,8 @@
             <v-card-text>
               <v-row align="center">
                 <v-col class="body-1" cols="12">
-                  <p @click="handleCopy(USDT_HFIL_DLT_Address, $event)">
-                    USDT-HFIL Pair Address: {{ USDT_HFIL_DLT_Address }}
+                  <p @click="handleCopy(USDT_HT_DLT_Address, $event)">
+                    USDT-HT Pair Address: {{ USDT_HT_DLT_Address }}
                     <v-icon>mdi-content-copy</v-icon>
                   </p>
                 </v-col>
@@ -156,8 +156,8 @@ import { validationMixin } from "vuelidate";
 import { required, decimal } from "vuelidate/lib/validators";
 import clip from "@/utils/clipboard";
 import {
-  CommunityRewardsUSDTHFILApproveContractAddress,
-  USDT_HFIL_DLT_Address
+  CommunityRewardsUSDTHTApproveContractAddress,
+  USDT_HT_DLT_Address
 } from "@/constants";
 import { getContract, weiToEther, etherToWei } from "@/utils/web3";
 // 引入合约 ABI 文件
@@ -171,7 +171,7 @@ export default {
   },
   data: () => ({
     loading: false,
-    USDT_HFIL_DLT_Address,
+    USDT_HT_DLT_Address,
     dialog: false,
     releaseAmountFocus: false,
     releaseAmount: undefined,
@@ -266,7 +266,7 @@ export default {
       try {
         const contract = getContract(
           CommunityRewards,
-          CommunityRewardsUSDTHFILApproveContractAddress,
+          CommunityRewardsUSDTHTApproveContractAddress,
           this.web3
         );
         const rewardsInfo = await contract.methods
@@ -294,7 +294,7 @@ export default {
         // 执行合约
         getContract(
           CommunityRewards,
-          CommunityRewardsUSDTHFILApproveContractAddress,
+          CommunityRewardsUSDTHTApproveContractAddress,
           this.web3
         )
           .methods.getReward(releaseAmount)

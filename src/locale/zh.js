@@ -111,8 +111,11 @@ export default {
   },
 
   "USDT-DAO": "USDT-DAO",
-  "USDT-HFIL": "USDT-HFIL",
+  "USDT-FIL": "USDT-FIL",
   "USDT-ETH": "USDT-ETH",
+  "USDT-HT": "USDT-HT",
+  "USDT-UNI": "USDT-UNI",
+  "USDT-MDX": "USDT-MDX",
   DAT: "DAT",
   "LP Token Address": "LP Token Address"
 };

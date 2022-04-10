@@ -35,12 +35,12 @@
             >{{ $t("USDT-DAO") }}</v-tab
           >
           <v-tab
-            to="/usdt-hfil"
+            to="/usdt-fil"
             :ripple="false"
             class="font-weight-bold"
             min-width="96"
             text
-            >{{ $t("USDT-HFIL") }}</v-tab
+            >{{ $t("USDT-FIL") }}</v-tab
           >
           <v-tab
             to="/usdt-eth"
@@ -49,6 +49,30 @@
             min-width="96"
             text
             >{{ $t("USDT-ETH") }}</v-tab
+          >
+          <v-tab
+            to="/usdt-ht"
+            :ripple="false"
+            class="font-weight-bold"
+            min-width="96"
+            text
+            >{{ $t("USDT-HT") }}</v-tab
+          >
+          <v-tab
+            to="/usdt-uni"
+            :ripple="false"
+            class="font-weight-bold"
+            min-width="96"
+            text
+            >{{ $t("USDT-UNI") }}</v-tab
+          >
+          <v-tab
+            to="/usdt-mdx"
+            :ripple="false"
+            class="font-weight-bold"
+            min-width="96"
+            text
+            >{{ $t("USDT-MDX") }}</v-tab
           >
         </v-tabs>
       </div>
@@ -79,11 +103,20 @@
           <v-list-item to="/usdt-dao">
             <v-list-item-title>{{ $t("USDT-DAO") }}</v-list-item-title>
           </v-list-item>
-          <v-list-item to="/usdt-hfil">
-            <v-list-item-title>{{ $t("USDT-HFIL") }}</v-list-item-title>
+          <v-list-item to="/usdt-fil">
+            <v-list-item-title>{{ $t("USDT-FIL") }}</v-list-item-title>
           </v-list-item>
           <v-list-item to="/usdt-eth">
             <v-list-item-title>{{ $t("USDT-ETH") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/usdt-ht">
+            <v-list-item-title>{{ $t("USDT-HT") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/usdt-uni">
+            <v-list-item-title>{{ $t("USDT-UNI") }}</v-list-item-title>
+          </v-list-item>
+          <v-list-item to="/usdt-mdx">
+            <v-list-item-title>{{ $t("USDT-MDX") }}</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
