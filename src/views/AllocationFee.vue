@@ -54,8 +54,8 @@
                 <v-card-text>
                   <v-row align="center">
                     <v-col class="body-1" cols="12">
-                      <p @click="handleCopy(item.address, $event)">
-                        LP Address: {{ item.address }}
+                      <p @click="handleCopy(item.lpAddress, $event)">
+                        LP Address: {{ item.lpAddress }}
                         <v-icon>mdi-content-copy</v-icon>
                       </p>
                     </v-col>
@@ -151,23 +151,28 @@ export default {
     lpContractList: [
       {
         name: "USDT-FIL",
-        address: "0x5Ed80A212Ffd935dE36211C3301b470D38D0Fc8A"
+        address: "0x5Ed80A212Ffd935dE36211C3301b470D38D0Fc8A",
+        lpAddress: "0xd9778D0937953E77Bbac603ee9631F421A8E09F1"
       },
       {
         name: "USDT-DAO",
-        address: "0xf105237BCE2233dc1Eb02762b4064E36F593B09C"
+        address: "0xf105237BCE2233dc1Eb02762b4064E36F593B09C",
+        lpAddress: "0x1dbCac9E084A25d542893B14128a5910dF43a6b7"
       },
       {
         name: "USDT-HT",
-        address: "0x1720cb4609Dd9CB462851ABB9E78A40FC63a5Ee5"
+        address: "0x1720cb4609Dd9CB462851ABB9E78A40FC63a5Ee5",
+        lpAddress: "0xeCef6EB0b8D20489a351F3062f4e869165279d1c"
       },
       {
         name: "USDT-ETH",
-        address: "0x6334E683F2327914CC27fB3cD92B29D52352C36E"
+        address: "0x6334E683F2327914CC27fB3cD92B29D52352C36E",
+        lpAddress: "0x7b2FCD7b828aECbc601aB1eE8afD1E2F635B5483"
       },
       {
         name: "USDT-LTC",
-        address: "0x533fB4BD4Bd384aA1ae52ee50743D36C6cd145ea"
+        address: "0x533fB4BD4Bd384aA1ae52ee50743D36C6cd145ea",
+        lpAddress: "0xB90DFAdE9428B6186DCd97ED2F3e251cC475648b"
       }
     ],
     // 记录列表
@@ -252,6 +257,7 @@ export default {
               const tempData = {
                 name: item.name,
                 address: item.address,
+                lpAddress: item.lpAddress,
                 rewardsAmount: rewardsAmount
               };
               this.rewardsDataList.push(tempData);
