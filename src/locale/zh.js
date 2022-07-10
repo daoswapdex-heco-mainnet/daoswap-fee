@@ -13,6 +13,8 @@ export default {
   News: "新闻",
 
   Close: "关闭",
+  "No Data": "暂无数据",
+  "LP List": "LP列表",
 
   "Stake Amount": "质押额度",
   "Stake begin in": "认购开始于",

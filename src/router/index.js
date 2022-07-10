@@ -1,56 +1,61 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import CommunityRewardsApproveUSDTDAO from "../views/CommunityRewardsApproveUSDTDAO.vue";
-import CommunityRewardsApproveUSDTFIL from "../views/CommunityRewardsApproveUSDTFIL.vue";
-import CommunityRewardsApproveUSDTETH from "../views/CommunityRewardsApproveUSDTETH.vue";
-import CommunityRewardsApproveUSDTHT from "../views/CommunityRewardsApproveUSDTHT.vue";
-import CommunityRewardsApproveUSDTUNI from "../views/CommunityRewardsApproveUSDTUNI.vue";
-import CommunityRewardsApproveUSDTMDX from "../views/CommunityRewardsApproveUSDTMDX.vue";
+import AllocationFee from "../views/AllocationFee.vue";
+// import CommunityRewardsApproveUSDTDAO from "../views/CommunityRewardsApproveUSDTDAO.vue";
+// import CommunityRewardsApproveUSDTFIL from "../views/CommunityRewardsApproveUSDTFIL.vue";
+// import CommunityRewardsApproveUSDTETH from "../views/CommunityRewardsApproveUSDTETH.vue";
+// import CommunityRewardsApproveUSDTHT from "../views/CommunityRewardsApproveUSDTHT.vue";
+// import CommunityRewardsApproveUSDTUNI from "../views/CommunityRewardsApproveUSDTUNI.vue";
+// import CommunityRewardsApproveUSDTMDX from "../views/CommunityRewardsApproveUSDTMDX.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "Home",
     component: () => import("@/layouts/home/Index.vue"),
     children: [
       {
         path: "",
         name: "Home",
-        redirect: "/usdt-dao",
-        component: () => import("@/views/home/Index.vue")
+        component: AllocationFee
       },
-      {
-        path: "/usdt-dao",
-        name: "RewardsUSDTDAO",
-        component: CommunityRewardsApproveUSDTDAO
-      },
-      {
-        path: "/usdt-fil",
-        name: "RewardsUSDTFIL",
-        component: CommunityRewardsApproveUSDTFIL
-      },
-      {
-        path: "/usdt-eth",
-        name: "RewardsUSDTETH",
-        component: CommunityRewardsApproveUSDTETH
-      },
-      {
-        path: "/usdt-ht",
-        name: "RewardsUSDTHT",
-        component: CommunityRewardsApproveUSDTHT
-      },
-      {
-        path: "/usdt-uni",
-        name: "RewardsUSDTUNI",
-        component: CommunityRewardsApproveUSDTUNI
-      },
-      {
-        path: "/usdt-mdx",
-        name: "RewardsUSDTMDX",
-        component: CommunityRewardsApproveUSDTMDX
-      },
+      // {
+      //   path: "",
+      //   name: "Home",
+      //   redirect: "/usdt-dao",
+      //   component: () => import("@/views/home/Index.vue")
+      // },
+      // {
+      //   path: "/usdt-dao",
+      //   name: "RewardsUSDTDAO",
+      //   component: CommunityRewardsApproveUSDTDAO
+      // },
+      // {
+      //   path: "/usdt-fil",
+      //   name: "RewardsUSDTFIL",
+      //   component: CommunityRewardsApproveUSDTFIL
+      // },
+      // {
+      //   path: "/usdt-eth",
+      //   name: "RewardsUSDTETH",
+      //   component: CommunityRewardsApproveUSDTETH
+      // },
+      // {
+      //   path: "/usdt-ht",
+      //   name: "RewardsUSDTHT",
+      //   component: CommunityRewardsApproveUSDTHT
+      // },
+      // {
+      //   path: "/usdt-uni",
+      //   name: "RewardsUSDTUNI",
+      //   component: CommunityRewardsApproveUSDTUNI
+      // },
+      // {
+      //   path: "/usdt-mdx",
+      //   name: "RewardsUSDTMDX",
+      //   component: CommunityRewardsApproveUSDTMDX
+      // },
       {
         path: "/404",
         component: () => import("@/views/404.vue")

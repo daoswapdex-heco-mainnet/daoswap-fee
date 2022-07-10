@@ -13,6 +13,8 @@ export default {
   News: "News",
 
   Close: "Close",
+  "No Data": "No Data",
+  "LP List": "LP List",
 
   "Stake Amount": "Stake Amount",
   "Stake begin in": "Stake begin in",

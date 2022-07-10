@@ -20,7 +20,7 @@
 
       <v-spacer />
 
-      <div>
+      <!-- <div>
         <v-tabs
           class="hidden-sm-and-down"
           optional
@@ -75,9 +75,9 @@
             >{{ $t("USDT-MDX") }}</v-tab
           >
         </v-tabs>
-      </div>
+      </div> -->
 
-      <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" />
+      <!-- <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer" /> -->
 
       <!-- 多语言切换 -->
       <!-- <v-menu offset-y>
@@ -97,7 +97,7 @@
       </v-menu> -->
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <!-- <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list shaped>
         <v-list-item-group v-model="group" color="#93B954">
           <v-list-item to="/usdt-dao">
@@ -120,7 +120,7 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
   </div>
 </template>
 
