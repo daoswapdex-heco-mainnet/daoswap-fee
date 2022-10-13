@@ -139,7 +139,6 @@ import { validationMixin } from "vuelidate";
 import clip from "@/utils/clipboard";
 import { compare } from "@/filters/index";
 import { getContractByABI, weiToEther, etherToWei } from "@/utils/web3";
-// import { WHITE_LISTS_SWITCH, WHITE_LISTS } from "@/constants/index";
 // 引入合约 ABI 文件
 import CommunityRewards_ABI from "@/constants/contractJson/CommunityRewardsApprove_abi.json";
 
@@ -151,34 +150,29 @@ export default {
     // LP合约列表
     lpContractList: [
       {
-        name: "USDT-UNI",
-        address: "0x34309313C978C0127d5854b71465676bcD06858F",
-        lpAddress: "0x9d6bd058A8364C813b623CD16cfeB0a99Bf46e56"
-      },
-      {
         name: "USDT-FIL",
-        address: "0xbCe880EE6f8E7048a6E0Ec735E18D6A9f667D04F",
+        address: "0x5Ed80A212Ffd935dE36211C3301b470D38D0Fc8A",
         lpAddress: "0xd9778D0937953E77Bbac603ee9631F421A8E09F1"
       },
       {
         name: "USDT-DAO",
-        address: "0xb73A35b7E2c7F86d801d7fC8D8C7ac9FC80332F6",
+        address: "0xf105237BCE2233dc1Eb02762b4064E36F593B09C",
         lpAddress: "0x1dbCac9E084A25d542893B14128a5910dF43a6b7"
       },
       {
-        name: "USDT-BCH",
-        address: "0xc3a0e7602A559830CC8810e44377Fd9326476072",
-        lpAddress: "0x716F8f6F9da4178A41b1649deaA4Dc280a548223"
+        name: "USDT-HT",
+        address: "0x1720cb4609Dd9CB462851ABB9E78A40FC63a5Ee5",
+        lpAddress: "0xeCef6EB0b8D20489a351F3062f4e869165279d1c"
       },
       {
-        name: "USDT-MANA",
-        address: "0xabf0831296766eeD8a2960592fDDd725398eBa17",
-        lpAddress: "0x75f7d3f41A96c85CDD463968CBCEf1cf873a2bD6"
+        name: "USDT-ETH",
+        address: "0x6334E683F2327914CC27fB3cD92B29D52352C36E",
+        lpAddress: "0x7b2FCD7b828aECbc601aB1eE8afD1E2F635B5483"
       },
       {
-        name: "USDT-MDX",
-        address: "0x681EAB82Dc6fef84CABD2a4ee7d862C7aD4474d6",
-        lpAddress: "0x1dc0781526E55E270dC06E08c2e1EFB88CCd3F2F"
+        name: "USDT-LTC",
+        address: "0x533fB4BD4Bd384aA1ae52ee50743D36C6cd145ea",
+        lpAddress: "0xB90DFAdE9428B6186DCd97ED2F3e251cC475648b"
       }
     ],
     // 记录列表
@@ -218,7 +212,6 @@ export default {
     },
     address() {
       return this.$store.state.web3.address;
-      // return "0x7d3dE024dEB70741c6Dfa0FaD57775A47C227AE2";
     },
     chainId() {
       return this.$store.state.web3.chainId;
@@ -244,8 +237,6 @@ export default {
     async getAccountAssets() {
       this.loading = true;
       try {
-        // WHITE_LISTS_SWITCH &&
-        // WHITE_LISTS.indexOf(this.address) > -1 &&
         if (this.lpContractList.length > 0) {
           this.rewardsDataList = [];
           this.loading = true;
