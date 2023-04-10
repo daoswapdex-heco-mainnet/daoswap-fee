@@ -190,7 +190,6 @@ export default {
     },
     address() {
       return this.$store.state.web3.address;
-      // return "0x415854D1459755Fa8ef1Bb1c723434C2DBcB8798";
     },
     chainId() {
       return this.$store.state.web3.chainId;
