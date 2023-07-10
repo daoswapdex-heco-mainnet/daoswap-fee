@@ -24,7 +24,8 @@ export const USDT_MDX_DLT_Address =
   "0x1dc0781526E55E270dC06E08c2e1EFB88CCd3F2F";
 
 // export const ContractAddress = "0x7b2235906537ef6c580b64fB860F0fD2fe94781A"; // 第5期
-export const ContractAddress = "0x127ae233D74F98f0e703e3270d0ca41c9b1e39Dc"; // 第6期
+// export const ContractAddress = "0x127ae233D74F98f0e703e3270d0ca41c9b1e39Dc"; // 第6期
+export const ContractAddress = "0x1ca254a83367dbd4f619820ab66ce33f5a2b0931"; // 第7期
 
 export const DAOAddress = "0xc096332CAacF00319703558988aD03eC6586e704";
 export const DATAddress = "0x738B815eaDD06E0041b52B0C9d4F0d0D277B24bA";
